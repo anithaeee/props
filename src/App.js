@@ -1,15 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import props from './Child';
+import Child from './Child';
 import { useState } from 'react';
-function Child(props) {
-  const[ name, setname] = useState('');
+function App(props) {
+  const data = [{name:'Anitha',Age:29,Place:'Hyderabad'},
+               {name:'Ashiwini',Age:24,Place:'Nalgonda'}]
   return (
     
       <>
-       <Child name={'Anitha'} />
+       <Child griddata={data} />
       </>
   );
 }
 
-export default Child;
+export default App;
