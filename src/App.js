@@ -5,7 +5,8 @@ import { useState } from 'react';
 function App(props) {
   const data = [{name:'Anitha',Age:29,Place:'Hyderabad'},
                {name:'Ashiwini',Age:24,Place:'Nalgonda'},
-               {name:'Mamata',Age:26,Place:'Kalwakurthiy'}]
+               {name:'Mamata',Age:26,Place:'Kalwakurthiy'}
+  ];   
   return (
     
       <>

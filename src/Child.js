@@ -4,12 +4,18 @@ import{DataTable} from 'primereact/datatable';
 import { Column } from 'primereact/column';
 const Child = (props) => {
     const [name, setname] = useState('');
+    const column = [
+      {field: 'name', header:'Name'},
+      {field: 'Age', header:'Age'},
+      {field: 'Place', header:'Place'},
+    ];
   return (
-    <div className='App'>
-        <DataTable value={props.griddata}>
-          <Column field='name' header='Name'></Column>
-          <Column field='Age' header='Age'></Column>
-          <Column field='Place' header='place'></Column>
+    <div>
+        <DataTable value={props.griddata} showGridlines tableStyle={{ minWidth: '50rem' }}>
+          {column.map((col, i)=>{
+            return(
+            <Column key={col.field} field={col.field} header={col.header}></Column>
+          )})}
         </DataTable>
     </div>
   );
